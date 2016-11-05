@@ -1,7 +1,8 @@
-# ACL extension for Sonata Admin
+# ACL extension for Sonata Admin and Symfony 3
 
 This bundle provides ACL list filtering for [SonataAdminBundle](https://github.com/sonata-project/SonataAdminBundle).
 When enabled, list screens only display data the logged in user has right to view.
+This bundle is Symfony 3 compatible
 
 This bundle is a good complementary of the SonataAdminBundle [ACL editor](http://sonata-project.org/bundles/admin/master/doc/reference/security.html#acl-editor).
 
