@@ -1,10 +1,11 @@
-# ACL extension for Sonata Admin and Symfony 3
+# ACL extension for Sonata Admin (Symfony 3 compatible)
 
 This bundle provides ACL list filtering for [SonataAdminBundle](https://github.com/sonata-project/SonataAdminBundle).
-When enabled, list screens only display data the logged in user has right to view.
-This bundle is Symfony 3 compatible
+When enabled, **list and dashboard** screen only display data the logged in user has right to view.
 
-This bundle is a good complementary of the SonataAdminBundle [ACL editor](http://sonata-project.org/bundles/admin/master/doc/reference/security.html#acl-editor).
+This bundle is **Symfony 3 compatible** and is a good complementary of the SonataAdminBundle [ACL editor](http://sonata-project.org/bundles/admin/master/doc/reference/security.html#acl-editor).
+
+
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/d7d70442-b52c-4072-8e03-45e6a47e1ca2/mini.png)](https://insight.sensiolabs.com/projects/d7d70442-b52c-4072-8e03-45e6a47e1ca2)
 
@@ -45,6 +46,8 @@ This extension is automatically enabled for all admins.
 ## Credits
 
 Created by [Kévin Dunglas](http://dunglas.fr) for [Les-Tilleuls.coop](http://les-tilleuls.coop).
+
+Forked and improved by [Francesco Cartenì](http://www.multimediaexperiencestudio.it)
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/coopTilleuls/cooptilleulsaclsonataadminextensionbundle/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

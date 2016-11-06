@@ -7,6 +7,8 @@
 
     <parameters>
         <parameter key="coop_tilleuls_acl_sonata_admin_extension.acl.extension.class">CoopTilleuls\Bundle\AclSonataAdminExtensionBundle\Admin\AclAdminExtension</parameter>
+        <parameter key="security.admin.admin_acl_permissions_voter.class">CoopTilleuls\Bundle\AclSonataAdminExtensionBundle\Security\Authorization\Voter\AdminACLPermissionsVoter</parameter>
+        <parameter key="security.acl.permission.map.class">Sonata\AdminBundle\Security\Acl\Permission\AdminPermissionMap</parameter>
     </parameters>
 
     <services>
@@ -16,6 +18,19 @@
             <argument>%security.role_hierarchy.roles%</argument>
             <tag name="sonata.admin.extension" global="true" />
         </service>
+
+        <service id="security.acl.permission.map" class="%security.acl.permission.map.class%" public="false"></service>
+
+        <service id="security.admin.admin_acl_permissions_voter" class="%security.admin.admin_acl_permissions_voter.class%" public="false">
+            <argument type="service" id="security.acl.provider" />
+            <argument type="service" id="security.acl.object_identity_retrieval_strategy" />
+            <argument type="service" id="security.acl.security_identity_retrieval_strategy" />
+            <argument type="service" id="security.acl.permission.map" />
+            <argument type="service" id="logger" on-invalid="null" />
+            <tag name="monolog.logger" channel="security" />
+            <tag name="security.voter" priority="255" />
+        </service>
+
     </services>
 
 </container>
