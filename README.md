@@ -16,7 +16,20 @@ Be sure that SonataAdminBundle is working and has [ACL enabled](http://sonata-pr
 Install this bundle using composer:
 
 ```
-composer require tilleuls/acl-sonata-admin-extension-bundle
+// composer.json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Carteni/CoopTilleulsAclSonataAdminExtensionBundle"
+        }
+    ],
+    "require": {
+        "tilleuls/acl-sonata-admin-extension-bundle": "dev-master"
+    }
+}
+
+$ composer update
 ```
 
 Register the bundle in your AppKernel:
