@@ -228,6 +228,20 @@ sonata_admin:
 
         # permission related to the objects
         object_permissions: [VIEW, EDIT, DELETE, UNDELETE, OPERATOR, MASTER, OWNER]
+
+
+// Test your permission in twig template for ex.
+
+{# use the admin security method  #}
+{% if admin.isGranted('EMAIL') %}
+    {# ... #}
+{% endif %}
+
+{# or use the default is_granted Symfony helper, the following will give the same result #}
+{% if is_granted('ROLE_SUPER_ADMIN') or is_granted('EMAIL') %}
+    {# ... #}
+{% endif %}
+
 ```
 
 ## TODO
